@@ -15,7 +15,7 @@ class App extends Component {
   }
 
   async loadBlockchainData() {
-    const web3 = new Web3(Web3.givenProvider || "http://localhost:8721")
+    const web3 = new Web3("http://localhost:8721")
     const accounts = await web3.eth.getAccounts()
     const accountList = []
     const indexList = []

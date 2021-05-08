@@ -49,7 +49,7 @@ export class Form extends Component {
 
                 <h4>Transferir ETH</h4>
 
-                <label className="texto">Cuenta Origen: </label>
+                <label className="texto">Cuenta Destino: </label>
                 <br/>
                 <input
                     type="text"
@@ -60,7 +60,7 @@ export class Form extends Component {
                 <br/>
                 <br/>
 
-                <label className="texto">Cuenta Destino: </label>
+                <label className="texto">Cuenta Origen: </label>
                 <br/>
                 <input
                     type="text"
