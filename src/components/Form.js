@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import "./Form.css"
 
 
 export class Form extends Component {
@@ -13,7 +14,9 @@ export class Form extends Component {
     mySubmitHandler = (event) => {
         event.preventDefault();
         console.log(this.state);
-        this.props.web.eth.sendTransaction({to: this.state.opcion1, from: this.state.opcion2, value: this.props.web.utils.toWei(this.state.monto, "ether")})
+        let option1Clean = this.state.opcion1.replace(/\s+/g, '')
+        let option2Clean = this.state.opcion2.replace(/\s+/g, '')
+        this.props.web.eth.sendTransaction({to: option1Clean, from: option2Clean, value: this.props.web.utils.toWei(this.state.monto, "ether")})
         this.props.onChange()
     }
 
@@ -43,16 +46,22 @@ export class Form extends Component {
     render() {
         return (
             <form onSubmit={this.mySubmitHandler}>
-                <label>Cuenta Origen: </label>
+
+                <h4>Transferir ETH</h4>
+
+                <label className="texto">Cuenta Origen: </label>
+                <br/>
                 <input
                     type="text"
                     value={this.state.opcion1}
                     onInput={this.handleOption1Change}
                 />
 
-                <br />
+                <br/>
+                <br/>
 
-                <label>Cuenta Destino: </label>
+                <label className="texto">Cuenta Destino: </label>
+                <br/>
                 <input
                     type="text"
                     value={this.state.opcion2}
@@ -60,13 +69,17 @@ export class Form extends Component {
                 />
 
                 <br />
+                <br/>
 
-                <label>Monto</label>
+                <label className="texto">Monto</label>
+                <br/>
                 <input
                     type="number"
                     value={this.state.monto}
                     onInput={this.handleMonto}
                 />
+                <br/>
+                <br/>
                 <button type="submit">Transferir</button>
             </form>
         );

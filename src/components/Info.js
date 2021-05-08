@@ -6,9 +6,10 @@ export class Info extends Component {
     render() {
         return(
             <div>
-                <p className="texto">CURRENT BLOCK: {this.props.blockNum}</p>
-                <p className="texto">CURRENT CHAIN ID: {this.props.idNode}</p>
-                <p className="texto">GAS PRICE: {this.props.gasPrice}</p>
+                <h4>Información General</h4>
+                <p className="texto">Bloque actual: {this.props.blockNum}</p>
+                <p className="texto">CHAIN ID: {this.props.idNode}</p>
+                <p className="texto">Precio de gas: {this.props.gasPrice}</p>
             </div>
         )
     }

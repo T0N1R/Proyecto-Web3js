@@ -15,7 +15,7 @@ class App extends Component {
   }
 
   async loadBlockchainData() {
-    const web3 = new Web3(Web3.givenProvider || "http://localhost:7545")
+    const web3 = new Web3(Web3.givenProvider || "http://localhost:8721")
     const accounts = await web3.eth.getAccounts()
     const accountList = []
     const indexList = []
@@ -96,7 +96,6 @@ class App extends Component {
       <div>
         <div className="center">
           <h1>Implementación Web3.js</h1>
-          <p>Gundam {'>'} Iron Man </p>
         </div>
 
         <div className="container">
@@ -105,8 +104,8 @@ class App extends Component {
             <thead>
               <tr>
                 <th>#</th>
-                <th>Cuenta</th>
-                <th>Cantidad</th>
+                <th>Dirección</th>
+                <th>Balance</th>
               </tr>
             </thead>
             <tbody>
