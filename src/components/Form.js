@@ -43,7 +43,7 @@ export class Form extends Component {
     render() {
         return (
             <form onSubmit={this.mySubmitHandler}>
-                <label>Opcion 1</label>
+                <label>Cuenta Origen: </label>
                 <input
                     type="text"
                     value={this.state.opcion1}
@@ -52,7 +52,7 @@ export class Form extends Component {
 
                 <br />
 
-                <label>Opcion 2</label>
+                <label>Cuenta Destino: </label>
                 <input
                     type="text"
                     value={this.state.opcion2}

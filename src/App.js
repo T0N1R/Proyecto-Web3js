@@ -163,9 +163,9 @@ class App extends Component {
             </tbody>
           </ReactBootStrap.Table>
 
-          <div>
+          <div className="right">
             <Info blockNum={this.state.blockNum} idNode={this.state.idNode} gasPrice={this.state.gasPrice}></Info>
-
+            <br/>
             <Form web={this.state.webProvider} onChange={this.onChange.bind(this)} ></Form>
           </div>
 
